@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>App MI</title>
+            <link rel="stylesheet" href="components/lungo/lungo.css">
+            <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+            <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+            <link rel="stylesheet" href="components/lungo/lungo.css">
+            <link rel="stylesheet" href="components/lungo/theme.lungo.css">
+        </head>
+        
+        <body class = "app">
+
+            <section id="main_section">
+                <header data-title="Proyecto MI">
+                    <nav>
+                         <a href="#features" data-router="aside" data-icon="menu"></a>
+                     </nav>
+                 </header>
+
+                <article id="main-article" class="active indented">
+                    <img src="imagenes/ejemplo1.jpg" width= "90%" height = "90%"></img>
+                </article>
+            </section>
+
+            <aside id="features">
+                <header data-title="Options"></header>
+                    <article class="active">
+                        <p> Sitios de Interes </p>
+                        <p> Vision Aumentada </p>
+                        <p> Mapa </p>
+                        <p>Notificaciones</p>
+                        <p>Noticias</p>
+                    </article>
+            </aside>
+
+
+
+
+        <!-- Lungo - Dependencies -->
+        <script src="components/quojs/quo.js"></script>
+        <script src="components/lungo/lungo.js"></script>
+        <!-- Lungo - Sandbox App -->
+        <script>
+            Lungo.init({
+                name: 'example'
+            });
+        </script>
+
+    <body>
+</html>
