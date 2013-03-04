@@ -1,0 +1,49 @@
+/* Estilos apartado de noticias */
+
+.noticias
+{
+	max-height: 480px;
+	display: inline-block;
+
+
+}
+
+#nivel1
+{
+	display: inline-block;
+	height: 300px;
+	width:  390px;
+	margin: 4px;
+}
+
+#nivel2
+{
+	display: inline-block;
+	height: 390px;
+	width: 190px;
+	margin: 4px;
+}
+
+#nivel3
+{
+	display: inline-block;
+	height: 200px;
+	width: 190px;
+	margin: 4px;
+}
+
+#nivel4
+{
+	display: inline-block;
+	height: 200px;
+	width: 390px;
+	margin: 4px;
+}
+
+.informacion
+{
+	background-color: #555;
+	display: inline-block;
+	max-height: 260px;
+	border: solid black;
+}

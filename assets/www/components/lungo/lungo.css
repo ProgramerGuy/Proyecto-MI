@@ -44,7 +44,7 @@ section.aside:not(.small){-webkit-transform:translateX(264px);-moz-transform:tra
 section.aside.small{-webkit-transform:translateX(64px);-moz-transform:translateX(64px);transform:translateX(64px)}
 section.aside.right{-webkit-transform:translateX(-264px);-moz-transform:translateX(-264px);transform:translateX(-264px);}
 section.aside.right.small{-webkit-transform:translateX(-64px);-moz-transform:translateX(-64px);transform:translateX(-64px)}
-aside{position:absolute;top:0;bottom:0;height:inherit;width:264px;display:none;z-index:-1;}
+aside{position:absolute;top:0;bottom:0;height:inherit;width:284px;display:none;z-index:-1;}
 aside.right{right:0}
 aside.show{z-index:0;display:block}
 aside header,aside footer{position:relative;left:none;height:44px}

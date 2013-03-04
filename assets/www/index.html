@@ -2,14 +2,14 @@
     <html>
         <head>
             <title>App MI</title>
+            <link rel="stylesheet" href="css/index2.css"> 
             <link rel="stylesheet" href="components/lungo/lungo.css">
             <link rel="stylesheet" href="components/lungo/lungo.icon.css">
             <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
-            <link rel="stylesheet" href="components/lungo/lungo.css">
             <link rel="stylesheet" href="components/lungo/theme.lungo.css">
         </head>
         
-        <body class = "app">
+        <body class = "app" id="contenedor">
 
             <section id="main_section">
                 <header data-title="Proyecto MI">
@@ -18,20 +18,30 @@
                      </nav>
                  </header>
 
-                <article id="main-article" class="active indented">
-                    <img src="imagenes/ejemplo1.jpg" width= "90%" height = "90%"></img>
-                </article>
+                    <article class="active scroll">
+                        <div class="noticias">
+                            <img src="imagenes/ejemplo1.jpg" id="nivel1"></img>
+                            <img src="imagenes/minecraft2.jpeg" id="nivel2"></img>
+                            <img src="imagenes/ghost.jpg" id="nivel2"></img>
+                            <img src="imagenes/minecraft7.jpeg" id="nivel4"></img>
+                            <img src="imagenes/minecraft3.jpeg" id="nivel3"></img>
+                            <img src="imagenes/minecraft4.jpeg" id="nivel3"></img>
+                            <img src="imagenes/minecraft5.jpeg" id="nivel3"></img>
+                            <img src="imagenes/minecraft6.jpeg" id="nivel3"></img>
+                        </div>
+                    </article>
             </section>
 
             <aside id="features">
-                <header data-title="Options"></header>
-                    <article class="active">
-                        <p> Sitios de Interes </p>
-                        <p> Vision Aumentada </p>
-                        <p> Mapa </p>
-                        <p>Notificaciones</p>
-                        <p>Noticias</p>
-                    </article>
+                <header data-title="Menu" ></header>
+                <article id="main-article" class="active list scroll">
+                    <ul>
+                        <li data-icon="camera" class="thumb"><a href="#"><strong>Vision Aumentada</strong> <small>Ralidad Aumentada</small></a></li>
+                        <li><a href="#"><strong>Sitios de Interes</strong><small>lugares interesantes</small></a></li>
+                        <li><a href="#"><strong>Mapa</strong></a></li>
+                        <li><a href="#"><strong>Noticias</strong></a></li>
+                    </ul>
+                 </article>
             </aside>
 
 
@@ -41,11 +51,7 @@
         <script src="components/quojs/quo.js"></script>
         <script src="components/lungo/lungo.js"></script>
         <!-- Lungo - Sandbox App -->
-        <script>
-            Lungo.init({
-                name: 'example'
-            });
-        </script>
+        <script src="js/lungoact.js"></script>
 
     <body>
 </html>
