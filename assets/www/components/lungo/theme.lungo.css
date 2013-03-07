@@ -34,10 +34,10 @@ a.theme:active {
 }
 /* -------------------------- LAYOUT COLORS -------------------------- */
 section > header {
-  background-color: #0093d5;
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #03b1ff, inset 0 -1px 0 #007db5;
+  background-color: #444;/*#0093d5*/
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #888, inset 0 -1px 0 #666 ; /*#03b1ff,#007db5;*/
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #888, inset 0 -1px 0 #666;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25), inset 0 1px 0 #888, inset 0 -1px 0 #666;
   color: #fff;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -84,10 +84,10 @@ aside > header {
 }
 /* -------------------------- NAVIGATION -------------------------- */
 section > header > nav a:not(.button) {
-  color: #00608a;
-  -webkit-text-shadow: 0 1px 0 #20baff;
-  -moz-text-shadow: 0 1px 0 #20baff;
-  text-shadow: 0 1px 0 #20baff;
+  color: #333;/*#00608a;*/
+  -webkit-text-shadow: 0 1px 0 #666;/*#20baff*/
+  -moz-text-shadow: 0 1px 0 #666;
+  text-shadow: 0 1px 0 #666;
 }
 section > header > nav a:not(.button):active {
   color: #004a6b;
