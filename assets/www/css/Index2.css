@@ -8,19 +8,25 @@
 
 }
 
+img
+{
+    height: auto;
+	max-width: 100%
+}
+
 #nivel1
 {
 	display: inline-block;
-	height: 350px;
-	width:  390px;
-	margin: 4px;
+	min-height: 290px;
+	min-width:  390px;
+	margin: 3px;
 }
 
 #nivel2
 {
 	display: inline-block;
-	height: 390px;
-	width: 190px;
+	min-height: 390px;
+	min-width: 190px;
 	margin: 4px;
 }
 

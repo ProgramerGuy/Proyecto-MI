@@ -1,57 +1,43 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>App MI</title>
-            <link rel="stylesheet" href="css/index2.css"> 
-            <link rel="stylesheet" href="components/lungo/lungo.css">
-            <link rel="stylesheet" href="components/lungo/lungo.icon.css">
-            <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
-            <link rel="stylesheet" href="components/lungo/theme.lungo.css">
-        </head>
-        
-        <body class = "app" id="contenedor">
+<html>
+  <head>
+    <title>Ejemplo de Geolocation</title>
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
 
-            <section id="main_section">
-                <header data-title="Proyecto MI">
-                    <nav>
-                         <a href="#features" data-router="aside" data-icon="menu"></a>
-                     </nav>
-                 </header>
+    // Espere a que PhoneGap se inicie
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-                    <article class="active scroll">
-                        <div class="noticias">
-                            <img src="imagenes/minecraft11.jpeg" id="nivel1"></img>
-                            <img src="imagenes/minecraft9.jpeg" id="nivel2"></img>
-                            <img src="imagenes/minecraft10.jpeg" id="nivel2"></img>
-                            <img src="imagenes/minecraft7.jpeg" id="nivel4"></img>
-                            <img src="imagenes/minecraft3.jpeg" id="nivel3"></img>
-                            <img src="imagenes/minecraft4.jpeg" id="nivel3"></img>
-                            <img src="imagenes/minecraft5.jpeg" id="nivel3"></img>
-                            <img src="imagenes/minecraft6.jpeg" id="nivel3"></img>
-                        </div>
-                    </article>
-            </section>
+    // PhoneGap esta listo
+    //
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    }
 
-            <aside id="features">
-                <header data-title="Menu" ></header>
-                <article id="main-article" class="active list scroll">
-                    <ul>
-                        <li data-icon="camera" class="thumb"><a href="#"><strong>Vision Aumentada</strong> <small>Ralidad Aumentada</small></a></li>
-                        <li><a href="#"><strong>Sitios de Interes</strong><small>lugares interesantes</small></a></li>
-                        <li><a href="#"><strong>Mapa</strong></a></li>
-                        <li><a href="#"><strong>Noticias</strong></a></li>
-                    </ul>
-                 </article>
-            </aside>
+    // Muestra los atributos de `Position`.
+    //
+    function onSuccess(position) {
+        var div = document.getElementById('myDiv');
 
+        div.innerHTML = 'Latitud: '             + position.coords.latitude  + '<br/>' +
+                        'Longitud: '            + position.coords.longitude + '<br/>' +
+                        'Altitud: '             + position.coords.altitude  + '<br/>' +
+                        'Precisión: '           + position.coords.accuracy  + '<br/>' +
+                        'Precisión Altitud: '   + position.coords.altitudeAccuracy  + '<br/>' +
+                        'Dirección: '           + position.coords.heading   + '<br/>' +
+                        'Velocidadd: '           + position.coords.speed     + '<br/>';
+    }
 
+    // Muestra una alerta si ocurre un problema obteniendo la geolocalización
+    //
+    function onError() {
+        alert('onError!');
+    }
 
-
-        <!-- Lungo - Dependencies -->
-        <script src="components/quojs/quo.js"></script>
-        <script src="components/lungo/lungo.js"></script>
-        <!-- Lungo - Sandbox App -->
-        <script src="js/lungoact.js"></script>
-
-    <body>
+    </script>
+  </head>
+  <body>
+    <div id="myDiv"></div>
+  </body>
 </html>

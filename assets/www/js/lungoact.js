@@ -1,4 +1,5 @@
 
-Lungo.init({
-    name: 'example'
-  });
+        Lungo.init({
+            name: 'example'
+        });
+
