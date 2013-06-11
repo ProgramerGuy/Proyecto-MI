@@ -5,24 +5,12 @@ window.onload = function() {
 		//Your options here:
 		mode:'vertical',
 		loop: true,
-		autoplay:5000,
-		delay: 500,
+		autoplay:5000
 	});  
 
-	mySwiper.startAutoPlay();
 
 }
 
 
 
-
-
-$(function(){
-	var mySwiper = $('.swiper-container').swiper({
-		//Your options here:
-		mode:'horizontal',
-		loop: true
-		//etc..
-	});
-})
 

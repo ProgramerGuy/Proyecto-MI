@@ -1,42 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Ejemplo de Geolocation</title>
-    <script type="text/javascript" charset="utf-8">
+    <html>
+        <head>
+            <title>App MI</title>
+            <link rel="stylesheet" href="css/index2.css"> 
+            <link rel="stylesheet" href="components/lungo/lungo.css">
+            <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+            <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+            <link rel="stylesheet" href="components/lungo/theme.lungo.css">
+            <link rel="stylesheet" href="css/idangerous.swiper.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script defer src="js/idangerous.swiper-1.9.min.js"></script>
+            <script defer src="js/idangerous.swiper.scrollbar-1.3.js"></script>
+            <script defer src="js/jquery-2.0.1.js"></script>
+            <script defer src="js/Swipper.js"></script>
+        </head>
+        
+        <body onload="Slider();" class = "app" id="contenedor">
 
-    // Espere a que PhoneGap se inicie
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+            <section id="main_section">
+                <header data-title="Proyecto MI">
+                    <nav>
+                         <a href="#features" data-router="aside" data-icon="menu"></a>
+                     </nav>
+                 </header>
 
-    // PhoneGap esta listo
-    //
-    function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    }
+                    <article class="active scroll">
+                       <div class="swiper-container">
+                            <div class="swiper-wrapper">
 
-    // Muestra los atributos de `Position`.
-    //
-    function onSuccess(position) {
-        var div = document.getElementById('myDiv');
+                                <div class="swiper-slide">
+                                    <img src="imagenes/minecraft1.jpeg ">
+                                </div>
+      
+                            <div class="swiper-slide">
+                                <img  src="imagenes/minecraft2.jpeg">
+                             </div>
+      
+                             <div class="swiper-slide">
+                                <img src="imagenes/minecraft3.jpeg">
+                            </div>
+      <!--Etc..-->
+                            </div>
+                        </div>
 
-        div.innerHTML = 'Latitud: '             + position.coords.latitude  + '<br/>' +
-                        'Longitud: '            + position.coords.longitude + '<br/>' +
-                        'Altitud: '             + position.coords.altitude  + '<br/>' +
-                        'Precisión: '           + position.coords.accuracy  + '<br/>' +
-                        'Precisión Altitud: '   + position.coords.altitudeAccuracy  + '<br/>' +
-                        'Dirección: '           + position.coords.heading   + '<br/>' +
-                        'Velocidadd: '           + position.coords.speed     + '<br/>';
-    }
+                    </article>
+            </section>
 
-    // Muestra una alerta si ocurre un problema obteniendo la geolocalización
-    //
-    function onError() {
-        alert('onError!');
-    }
+            <aside id="features">
+                <header data-title="Menu" ></header>
+                <article id="main-article" class="active list scroll">
+                    <ul>
+                        <li data-icon="camera" class="thumb"><a href="#"><strong>Vision Aumentada</strong> <small>Ralidad Aumentada</small></a></li>
+                        <li><a href="#"><strong>Sitios de Interes</strong><small>lugares interesantes</small></a></li>
+                        <li><a href="#"><strong>Mapa</strong></a></li>
+                        <li><a href="#"><strong>Noticias</strong></a></li>
+                    </ul>
+                 </article>
+            </aside>
 
-    </script>
-  </head>
-  <body>
-    <div id="myDiv"></div>
-  </body>
+
+
+
+        <!-- Lungo - Dependencies -->
+        <script src="components/quojs/quo.js"></script>
+        <script src="components/lungo/lungo.js"></script>
+        <!-- Lungo - Sandbox App -->
+        <script src="js/lungoact.js"></script>
+
+    <body>
 </html>

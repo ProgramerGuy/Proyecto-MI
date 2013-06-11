@@ -1,3 +1,32 @@
+<?php
+    if (isset($_FILES["ImageUpload"])) {
+
+        //si la imagen es cargada botton
+        $imageName = $_FILES["ImageUpload"]["name"];
+        $imageName = $_FILES["ImageUpload"]["tmp_name"];
+        $imageName = $_FILES["ImageUpload"]["type"];
+
+        //filtro de nombres
+
+        $imageName = preg_replace("#[^a-z=-9]#i", "", $imageName);
+
+        //erro
+        if (!imageTemp) {
+
+            echo ("Necesitas seleccionar una imagen");
+            # code...
+        }else
+        {
+            move_uploaded_file($imageTemp,"img/$imageName");
+        }
+    }
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
     <html>
     <head>
@@ -54,6 +83,15 @@
          </script>
     </head>
     <body  onload="Slider();">
+
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="ImageUpload"> Seleccione la imagen a subir...<br><br>
+            <input type="submit" value="Upload">
+        </form>
+
+        <hr>
+
+
     	<div class="slider">
     		<img id="1" src="img/sld1.jpg" border="0">
     		<img id="2" src="img/sld4.jpg" border="0">
